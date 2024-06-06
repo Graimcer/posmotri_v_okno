@@ -43,8 +43,9 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  width: 1140px;
-  margin: auto;
+  inline-size: 90%;
+  margin-inline: auto;
+  margin-block: auto;
 }
 
 .result {
@@ -94,7 +95,7 @@ ol {
 
 .search-form__textfield {
   min-inline-size: 225px;
-  height: 27px;
+  min-height: 27px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -120,6 +121,7 @@ ol {
 .search-form__textfield:hover {
   cursor: text;
 }
+
 .search-form__textfield:active {
   outline: 1px solid #fff;
 }
@@ -142,10 +144,12 @@ ol {
   display: flex;
   gap: 5px;
   flex-direction: row;
+  align-items: center;
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
+  color: #fff;
 }
 
 .search-form__label:has(.search-form__checkbox):hover {
@@ -169,13 +173,14 @@ ol {
   justify-content: center;
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
+  color:#fff;
   cursor: pointer;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   display: block;
-  width: 15px;
+  width: 16px;
   height: 15px;
   background-color: #fff;
   content: "";
@@ -194,8 +199,8 @@ ol {
   line-height: normal;
   appearance: none;
   cursor: pointer;
-  position: relative;
-  bottom: -18px;
+  align-self: center;
+  margin-bottom: -20px;
 
 }
 
@@ -259,7 +264,6 @@ ol {
   display: block;
   text-decoration: none;
   color: #fff;
-  margin: 2px;
 }
 
 .content__card-link:hover {
@@ -304,6 +308,10 @@ ol {
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 394px;
 }
 
 .content__video-card-description {
@@ -312,13 +320,14 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px;
+  max-width: 394px;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   object-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .more-button {
