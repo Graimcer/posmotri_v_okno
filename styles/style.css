@@ -43,7 +43,6 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  inline-size: 90%;
   margin-inline: auto;
   margin-block: auto;
 }
@@ -199,9 +198,6 @@ ol {
   line-height: normal;
   appearance: none;
   cursor: pointer;
-  align-self: center;
-  margin-bottom: -20px;
-
 }
 
 .button:hover {
@@ -222,6 +218,7 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
+  align-self: end;
 }
 
 .content__details {
@@ -264,6 +261,7 @@ ol {
   display: block;
   text-decoration: none;
   color: #fff;
+  padding: 2px;
 }
 
 .content__card-link:hover {
@@ -320,7 +318,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px;
-  max-width: 394px;
+  max-width: 200px;
 }
 
 .content__video-card-thumbnail {
